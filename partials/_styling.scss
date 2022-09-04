@@ -1,0 +1,11 @@
+@import 'variables';
+@mixin header {
+    font-size: $headerfs;
+    color: black;
+    letter-spacing: 2px;
+}
+@mixin headerh3 {
+    font-size: 1.75rem;
+    text-align: center;
+    color: lighten(black, 30%);
+}

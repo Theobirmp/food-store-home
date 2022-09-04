@@ -1,0 +1,295 @@
+@import './partials/variables';
+@import './partials/styling';
+@import './partials/header';
+@import './partials/footer';
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top:6.25rem;
+}
+
+
+
+.page-1{
+    background-image: url(./images/page1Background.jpg);
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height:100vh;
+    .page-1-content{
+        height: 100%;
+        width: 50%;
+        align-self: flex-start;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+        flex-direction: column;
+        .page-1-content-h2{
+            @include header;
+        }
+        .page-1-content-h3{
+            @include headerh3;
+        }
+        .page-1-content-button{
+            padding: 1rem .5rem;
+            background-color: coral;
+            color: black;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all ease-in 250ms;
+        }
+        .page-1-content-button:hover{
+            background-color: black;
+            color: coral;
+        }
+
+    }
+}
+.page-2{
+    padding-top: Min(100px, Max(20px, 100/1920*100vw));
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding-inline:Min(200px, Max(20px, 200/1920*100vw));
+    .page-2-content{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: flex-start;
+        max-width: 1100px;
+        margin: 0 auto;
+        .page-2-content-h2{
+            @include header;
+        }
+    }
+    .page-2-content-image img{
+        max-width: 600px;
+    }
+    .page-2-content-p{
+        font-size: 1.25rem;
+        color: lighten(black, 10%);
+        letter-spacing: .1px;
+        line-height: 1.75rem;
+    }
+}
+.page-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 4rem;
+    .page-3-h2{
+        @include header;
+        .page-3-our-menu{display: inline-block}
+        .page-3-our-menu::first-letter{
+            color: coral;
+            
+        }
+    }
+    .page3-h3{
+        @include headerh3;
+    }
+    .page-3-grid{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        img{
+            max-width: 400px;
+        }
+        .page-3-grid-item{
+            border-radius: 10px;
+            overflow: hidden;
+        .page-3-grid-item-summary{
+            font-size: 1.25rem;
+            color: lighten(black, 10%);
+        }
+        }
+    }
+}
+.page-4{
+    // padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 4rem;
+    .page-4-h2{
+        @include header;
+        .page-4-experts::first-letter{
+            color: coral;
+        }
+        .page-4-experts{
+            display: inline-block
+        }
+    }
+    .page-4-h3{
+        @include headerh3;
+    }
+    .page-4-grid{
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: center;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        column-gap: 5rem;
+        row-gap: 1.75rem;
+        .page-4-grid-item{
+            margin-top: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            img{
+                max-width: 400px;
+            }
+        .page-4-grid-item-h3{
+            @include headerh3;
+        }
+        }
+    }
+}
+.page-5{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    .page-5-bg-image{
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+    .page-5-content{
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        .page-5-h2{
+            @include header;
+            color: white;
+            .page-5-said{
+                display: inline-block;
+            }
+            .page-5-said::first-letter{
+                color: coral
+            }
+        }
+        .page-5-h3{
+            @include headerh3;
+            color: white;
+        }
+        .page-5-grid{
+            margin-top: 2rem;
+            width: 80%;
+            display: flex;
+            gap: 1.5rem;
+            // flex-wrap: wrap;
+            .page-5-grid-item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .75rem;
+                background-color: rgba(white, .9);
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+                border-radius: 4px;
+                padding: 1rem;
+                >p{
+                    max-width: 40ch;
+                    font-size: 1.25rem;
+                    line-height: 1.75rem;
+                    text-align: center;
+                }
+                >img{
+                    width:65px;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                }
+                >h5{
+                    color: coral;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+.page-6{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    .page-6-h2{
+        @include header;
+    }
+    .page-6-h2::first-letter{
+        color: coral
+    }
+    .page-6-h3{
+        @include headerh3;
+    }
+    .page-6-content{
+        width: 80%;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        .page-6-submit-button{
+            padding: .75rem 1.5rem;
+            border: none;
+            background-color: coral;
+            color: white;
+            transition: all 250ms ease-in;
+            align-self: flex-start;
+            cursor: pointer;
+        }
+        .page-6-submit-button:hover{
+            color: coral;
+            background-color: black;
+        }
+        .page-6-content-form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+            padding: 1rem 2rem;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        }
+        .page-6-content-image{
+            max-width: 600px;
+        }
+    }
+}
+//css classes associated with js
+.pos-fixed{
+    position: fixed!important;
+}
+//pages 
+.page{
+    min-height: 100vh;
+}
