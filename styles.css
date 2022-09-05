@@ -332,6 +332,8 @@ body {
   }
 }
 .page-2 {
+  min-height: unset !important;
+  padding-bottom: 2rem;
   padding-top: min(100px, max(20px, 5.2083333333vw));
   display: flex;
   gap: 2rem;
@@ -373,7 +375,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 }
 .page-3 .page-3-h2 {
   font-size: min(30px, max(20px, 1.5625vw));
@@ -419,6 +421,7 @@ body {
   }
 }
 .page-4 {
+  padding-top: 2rem;
   border: solid 1px red;
   overflow: hidden;
   display: flex;
