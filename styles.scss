@@ -17,7 +17,9 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top:6.25rem;
 }
-
+body{
+    position: relative;
+}
 
 
 .page-1{
@@ -28,6 +30,7 @@ html{
     min-height: 100vh;
     height:100vh;
     .page-1-content{
+        padding-left: 2rem;
         height: 100%;
         width: 50%;
         align-self: flex-start;
@@ -61,6 +64,13 @@ html{
 
     }
 }
+@media (max-width:950px){
+    .page-1-content{
+        padding: 2rem;
+        width: 100%!important;
+        align-self: center!important;
+    }
+}
 .page-2{
     padding-top: Min(100px, Max(20px, 100/1920*100vw));
     display: flex;
@@ -79,13 +89,19 @@ html{
         }
     }
     .page-2-content-image img{
-        max-width: 600px;
+        width: clamp(300px,100%,600px);
     }
     .page-2-content-p{
         font-size: 1.25rem;
         color: lighten(black, 10%);
         letter-spacing: .1px;
         line-height: 1.75rem;
+    }
+}
+@media (max-width:950px) {
+    .page-2{
+        flex-direction: column;
+        padding-bottom: 2rem;
     }
 }
 .page-3{
@@ -113,11 +129,14 @@ html{
         gap: 2rem;
         flex-wrap: wrap;
         img{
-            max-width: 400px;
+            max-width: 300px;
         }
         .page-3-grid-item{
             border-radius: 10px;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap:1em;
         .page-3-grid-item-summary{
             font-size: 1.25rem;
             color: lighten(black, 10%);
@@ -125,8 +144,15 @@ html{
         }
     }
 }
+@media (max-width:500px) {
+    .page-3-h3{
+        text-align: center!important;
+    }
+}
 .page-4{
     // padding-top: 2rem;
+    border: solid 1px red;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,6 +177,7 @@ html{
         width: 80%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        justify-content: center;
         column-gap: 5rem;
         row-gap: 1.75rem;
         .page-4-grid-item{
@@ -160,12 +187,20 @@ html{
             align-items: center;
             gap: 1rem;
             img{
-                max-width: 400px;
+                max-width: 500px;
             }
         .page-4-grid-item-h3{
             @include headerh3;
         }
         }
+    }
+}
+@media (max-width:600px) {
+    .page-4-grid-item > img{
+        max-width: 300px!important;
+    }
+    .page-4-h2{
+        padding-top: 1rem!important;
     }
 }
 .page-5{
@@ -176,10 +211,12 @@ html{
     justify-content: center;
     gap: 1rem;
     position: relative;
+    border: solid 1px red;
     .page-5-bg-image{
         position: absolute;
         inset: 0;
         z-index: -1;
+        height: 100%;
     }
     .page-5-content{
         position: relative;
@@ -236,6 +273,14 @@ html{
         }
     }
 }
+@media (max-width:950px) {
+    .page-5{
+        padding: 2rem;
+    }
+    .page-5-grid{
+        flex-direction: column;
+    }
+}
 .page-6{
     margin-top: 3rem;
     display: flex;
@@ -285,6 +330,15 @@ html{
         }
     }
 }
+@media (max-width:950px) {
+    .page-6-content{
+        flex-direction: column!important;
+        padding-bottom: 2rem;
+    }
+    .page-6-h2{
+        padding-top: 1rem!important;
+    }
+}
 //css classes associated with js
 .pos-fixed{
     position: fixed!important;
@@ -293,3 +347,4 @@ html{
 .page{
     min-height: 100vh;
 }
+

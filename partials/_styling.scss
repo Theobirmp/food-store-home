@@ -5,7 +5,7 @@
     letter-spacing: 2px;
 }
 @mixin headerh3 {
-    font-size: 1.75rem;
+    font-size: $headerh3;
     text-align: center;
     color: lighten(black, 30%);
 }
