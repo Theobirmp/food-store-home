@@ -187,7 +187,7 @@
 }
 
 .footer-h2 {
-  font-size: min(30px, max(20px, 1.5625vw));
+  font-size: min(40px, max(20px, 2.0833333333vw));
   color: black;
   letter-spacing: 2px;
 }
@@ -298,12 +298,12 @@ body {
   flex-direction: column;
 }
 .page-1 .page-1-content .page-1-content-h2 {
-  font-size: min(30px, max(20px, 1.5625vw));
+  font-size: min(40px, max(20px, 2.0833333333vw));
   color: black;
   letter-spacing: 2px;
 }
 .page-1 .page-1-content .page-1-content-h3 {
-  font-size: min(24px, max(16px, 1.25vw));
+  font-size: min(32px, max(16px, 1.6666666667vw));
   text-align: center;
   color: #4d4d4d;
 }
@@ -349,7 +349,7 @@ body {
   margin: 0 auto;
 }
 .page-2 .page-2-content .page-2-content-h2 {
-  font-size: min(30px, max(20px, 1.5625vw));
+  font-size: min(40px, max(20px, 2.0833333333vw));
   color: black;
   letter-spacing: 2px;
 }
@@ -378,7 +378,7 @@ body {
   padding-bottom: 1rem;
 }
 .page-3 .page-3-h2 {
-  font-size: min(30px, max(20px, 1.5625vw));
+  font-size: min(40px, max(20px, 2.0833333333vw));
   color: black;
   letter-spacing: 2px;
 }
@@ -389,7 +389,7 @@ body {
   color: coral;
 }
 .page-3 .page3-h3 {
-  font-size: min(24px, max(16px, 1.25vw));
+  font-size: min(32px, max(16px, 1.6666666667vw));
   text-align: center;
   color: #4d4d4d;
 }
@@ -399,11 +399,17 @@ body {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-rows: repeat(2, 450px);
+  gap: 1rem;
+  width: 100%;
 }
 .page-3 .page-3-grid img {
   max-width: 300px;
 }
 .page-3 .page-3-grid .page-3-grid-item {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
@@ -411,6 +417,7 @@ body {
   gap: 1em;
 }
 .page-3 .page-3-grid .page-3-grid-item .page-3-grid-item-summary {
+  padding-left: 1rem;
   font-size: 1.25rem;
   color: #1a1a1a;
 }
@@ -422,7 +429,6 @@ body {
 }
 .page-4 {
   padding-top: 2rem;
-  border: solid 1px red;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -431,7 +437,7 @@ body {
   padding-bottom: 4rem;
 }
 .page-4 .page-4-h2 {
-  font-size: min(30px, max(20px, 1.5625vw));
+  font-size: min(40px, max(20px, 2.0833333333vw));
   color: black;
   letter-spacing: 2px;
 }
@@ -442,7 +448,7 @@ body {
   display: inline-block;
 }
 .page-4 .page-4-h3 {
-  font-size: min(24px, max(16px, 1.25vw));
+  font-size: min(32px, max(16px, 1.6666666667vw));
   text-align: center;
   color: #4d4d4d;
 }
@@ -466,7 +472,7 @@ body {
   max-width: 500px;
 }
 .page-4 .page-4-grid .page-4-grid-item .page-4-grid-item-h3 {
-  font-size: min(24px, max(16px, 1.25vw));
+  font-size: min(32px, max(16px, 1.6666666667vw));
   text-align: center;
   color: #4d4d4d;
 }
@@ -487,7 +493,6 @@ body {
   justify-content: center;
   gap: 1rem;
   position: relative;
-  border: solid 1px red;
 }
 .page-5 .page-5-bg-image {
   position: absolute;
@@ -504,7 +509,7 @@ body {
   align-items: center;
 }
 .page-5 .page-5-content .page-5-h2 {
-  font-size: min(30px, max(20px, 1.5625vw));
+  font-size: min(40px, max(20px, 2.0833333333vw));
   color: black;
   letter-spacing: 2px;
   color: white;
@@ -516,7 +521,7 @@ body {
   color: coral;
 }
 .page-5 .page-5-content .page-5-h3 {
-  font-size: min(24px, max(16px, 1.25vw));
+  font-size: min(32px, max(16px, 1.6666666667vw));
   text-align: center;
   color: #4d4d4d;
   color: white;
@@ -569,7 +574,7 @@ body {
   align-items: center;
 }
 .page-6 .page-6-h2 {
-  font-size: min(30px, max(20px, 1.5625vw));
+  font-size: min(40px, max(20px, 2.0833333333vw));
   color: black;
   letter-spacing: 2px;
 }
@@ -577,7 +582,7 @@ body {
   color: coral;
 }
 .page-6 .page-6-h3 {
-  font-size: min(24px, max(16px, 1.25vw));
+  font-size: min(32px, max(16px, 1.6666666667vw));
   text-align: center;
   color: #4d4d4d;
 }
