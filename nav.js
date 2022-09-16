@@ -1,3 +1,4 @@
+//keep styling on selected link
 const navLinks=document.querySelectorAll('.navigation-ul-li')
 navLinks.forEach(link=>{
     link.addEventListener('click',(e)=>{

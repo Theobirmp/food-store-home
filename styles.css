@@ -180,6 +180,55 @@
     display: none !important;
   }
 }
+.hamburger {
+  z-index: 999;
+  position: relative;
+  width: 42.4264068712px;
+  aspect-ratio: 1;
+  display: block;
+}
+.hamburger .hamburger-button {
+  margin-top: 50%;
+}
+.hamburger .hamburger-button, .hamburger .hamburger-button::before, .hamburger .hamburger-button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42.4264068712px;
+  height: 3px;
+  border-radius: 4px;
+  background-color: black;
+}
+.hamburger .hamburger-button.active, .hamburger .hamburger-button.active::before, .hamburger .hamburger-button.active::after {
+  background-color: white;
+}
+.hamburger .hamburger-button::before {
+  content: "";
+  margin-top: -15px;
+  transition: all linear 200ms;
+  transform-origin: center;
+}
+.hamburger .hamburger-button::after {
+  content: "";
+  margin-top: 15px;
+  transition: all linear 200ms;
+  transform-origin: center;
+}
+
+.burger:checked + .hamburger .hamburger-button {
+  background-color: transparent;
+}
+.burger:checked + .hamburger .hamburger-button::before {
+  transform: translateY(15px) rotateZ(45deg);
+}
+.burger:checked + .hamburger .hamburger-button::after {
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+
+.none {
+  visibility: hidden;
+}
+
 .footer {
   margin-top: 6rem;
   display: flex;
