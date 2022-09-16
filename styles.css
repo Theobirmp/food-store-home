@@ -59,6 +59,11 @@
   color: black;
   font-weight: bolder;
 }
+.navigation .navigation-ul .navigation-ul-li.active {
+  background-color: coral;
+  color: black;
+  font-weight: bolder;
+}
 
 .mobile-navigation-ul {
   position: absolute;
@@ -176,6 +181,7 @@
   }
 }
 .footer {
+  margin-top: 6rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -375,7 +381,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding-bottom: 1rem;
 }
 .page-3 .page-3-h2 {
   font-size: min(40px, max(20px, 2.0833333333vw));
@@ -401,7 +406,7 @@ body {
   flex-wrap: wrap;
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
-  grid-template-rows: repeat(2, 450px);
+  grid-template-rows: repeat(auto, 450px);
   gap: 1rem;
   width: 100%;
 }
@@ -415,6 +420,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  padding-bottom: 1rem;
 }
 .page-3 .page-3-grid .page-3-grid-item .page-3-grid-item-summary {
   padding-left: 1rem;
@@ -499,6 +505,7 @@ body {
   inset: 0;
   z-index: -1;
   height: 100%;
+  width: 100%;
 }
 .page-5 .page-5-content {
   position: relative;
@@ -567,11 +574,11 @@ body {
   }
 }
 .page-6 {
-  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+  min-height: unset !important;
 }
 .page-6 .page-6-h2 {
   font-size: min(40px, max(20px, 2.0833333333vw));
@@ -635,4 +642,5 @@ body {
 
 .page {
   min-height: 100vh;
+  margin-bottom: 4rem;
 }/*# sourceMappingURL=styles.css.map */

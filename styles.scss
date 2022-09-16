@@ -112,7 +112,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding-bottom: 1rem;
+    // padding-bottom: 1rem;
     .page-3-h2{
         @include header;
         .page-3-our-menu{display: inline-block}
@@ -132,7 +132,7 @@ body{
         flex-wrap: wrap;
         display: grid;  
         grid-template-columns: repeat(auto-fit, 300px);
-        grid-template-rows: repeat(2, 450px);  
+        grid-template-rows: repeat(auto, 450px);  
         gap: 1rem;
         width: 100%;
         img{
@@ -145,6 +145,7 @@ body{
             display: flex;
             flex-direction: column;
             gap:1em;
+            padding-bottom: 1rem;
         .page-3-grid-item-summary{
             padding-left: 1rem;
             font-size: 1.25rem;
@@ -224,6 +225,7 @@ body{
         inset: 0;
         z-index: -1;
         height: 100%;
+        width: 100%;
     }
     .page-5-content{
         position: relative;
@@ -289,11 +291,11 @@ body{
     }
 }
 .page-6{
-    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+    min-height: unset!important;
     .page-6-h2{
         @include header;
     }
@@ -353,5 +355,6 @@ body{
 //pages 
 .page{
     min-height: 100vh;
+    margin-bottom: 4rem;
 }
 
