@@ -107,7 +107,6 @@
   font-size: 1.75rem;
   color: black;
   cursor: pointer;
-  padding: 0.5rem 0.25rem;
   border-radius: 4px;
   font-weight: normal;
   transition: background-color 250ms ease-in, font-weight 100ms ease-in;
@@ -115,6 +114,7 @@
 .navigation .navigation-ul .navigation-ul-li > a {
   color: inherit;
   text-decoration: none;
+  padding: 0.5rem 0.25rem;
 }
 .navigation .navigation-ul .navigation-ul-li::after {
   content: "";
